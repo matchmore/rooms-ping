@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (4.7.2)
+  - Matchmore (0.6.0):
+    - Alamofire (~> 4.0)
+    - Starscream (~> 3.0)
+  - Starscream (3.0.5)
+
+DEPENDENCIES:
+  - Matchmore (from `../alps-ios-sdk`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Starscream
+
+EXTERNAL SOURCES:
+  Matchmore:
+    :path: "../alps-ios-sdk"
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Matchmore: 923767d3cb16d21a3a82fb02119174adbe4e34f3
+  Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
+
+PODFILE CHECKSUM: 598791372975d7b8355073652c213ff27359fa85
+
+COCOAPODS: 1.5.0
