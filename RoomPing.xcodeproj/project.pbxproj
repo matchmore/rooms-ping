@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EE2B45836A278AF13B4138F /* Pods_RoomPing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B959A294505AB6CA45FBD9C7 /* Pods_RoomPing.framework */; };
+		AA07DCE50E7246A51D1382EE /* Pods_RoomPing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8E0B8D15032580871ED415 /* Pods_RoomPing.framework */; };
 		C32C2DBD209076700072388E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C2DBC209076700072388E /* AppDelegate.swift */; };
 		C32C2DBF209076700072388E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C2DBE209076700072388E /* ViewController.swift */; };
 		C32C2DC2209076700072388E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32C2DC0209076700072388E /* Main.storyboard */; };
@@ -16,9 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E9270B21D0E1DDB72F2341C /* Pods-RoomPing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomPing.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoomPing/Pods-RoomPing.release.xcconfig"; sourceTree = "<group>"; };
-		8C4B6378ED7EAC45C3682623 /* Pods-RoomPing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomPing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoomPing/Pods-RoomPing.debug.xcconfig"; sourceTree = "<group>"; };
-		B959A294505AB6CA45FBD9C7 /* Pods_RoomPing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomPing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67DEB168A3A61E4C788B4659 /* Pods-RoomPing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomPing.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoomPing/Pods-RoomPing.release.xcconfig"; sourceTree = "<group>"; };
+		7E8E0B8D15032580871ED415 /* Pods_RoomPing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoomPing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89E5C85E8B71803C4359E066 /* Pods-RoomPing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoomPing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoomPing/Pods-RoomPing.debug.xcconfig"; sourceTree = "<group>"; };
 		C32C2DB9209076700072388E /* RoomPing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoomPing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32C2DBC209076700072388E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C32C2DBE209076700072388E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,20 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE2B45836A278AF13B4138F /* Pods_RoomPing.framework in Frameworks */,
+				AA07DCE50E7246A51D1382EE /* Pods_RoomPing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D60A9A787F761995B85D2E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E8E0B8D15032580871ED415 /* Pods_RoomPing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF4F81945B243FCE8C167419 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89E5C85E8B71803C4359E066 /* Pods-RoomPing.debug.xcconfig */,
+				67DEB168A3A61E4C788B4659 /* Pods-RoomPing.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C32C2DB0209076700072388E = {
 			isa = PBXGroup;
 			children = (
 				C32C2DBB209076700072388E /* RoomPing */,
 				C32C2DBA209076700072388E /* Products */,
-				DDC1772B83D63DB7148FBB57 /* Pods */,
-				CF01A7A7C3B65D9ED663EDE2 /* Frameworks */,
+				AF4F81945B243FCE8C167419 /* Pods */,
+				2D60A9A787F761995B85D2E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,23 +88,6 @@
 			path = RoomPing;
 			sourceTree = "<group>";
 		};
-		CF01A7A7C3B65D9ED663EDE2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B959A294505AB6CA45FBD9C7 /* Pods_RoomPing.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DDC1772B83D63DB7148FBB57 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8C4B6378ED7EAC45C3682623 /* Pods-RoomPing.debug.xcconfig */,
-				5E9270B21D0E1DDB72F2341C /* Pods-RoomPing.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,11 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C32C2DCB209076720072388E /* Build configuration list for PBXNativeTarget "RoomPing" */;
 			buildPhases = (
-				B23C85F1B411240132DC4E33 /* [CP] Check Pods Manifest.lock */,
+				81E79D0ED8A638DAEF4FBFE9 /* [CP] Check Pods Manifest.lock */,
 				C32C2DB5209076700072388E /* Sources */,
 				C32C2DB6209076700072388E /* Frameworks */,
 				C32C2DB7209076700072388E /* Resources */,
-				C576E42769EF279A1DB04682 /* [CP] Embed Pods Frameworks */,
+				EB9A9044F69052A421AC6311 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,7 +157,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B23C85F1B411240132DC4E33 /* [CP] Check Pods Manifest.lock */ = {
+		81E79D0ED8A638DAEF4FBFE9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -175,7 +175,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C576E42769EF279A1DB04682 /* [CP] Embed Pods Frameworks */ = {
+		EB9A9044F69052A421AC6311 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -347,7 +347,7 @@
 		};
 		C32C2DCC209076720072388E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C4B6378ED7EAC45C3682623 /* Pods-RoomPing.debug.xcconfig */;
+			baseConfigurationReference = 89E5C85E8B71803C4359E066 /* Pods-RoomPing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,7 +366,7 @@
 		};
 		C32C2DCD209076720072388E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E9270B21D0E1DDB72F2341C /* Pods-RoomPing.release.xcconfig */;
+			baseConfigurationReference = 67DEB168A3A61E4C788B4659 /* Pods-RoomPing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
