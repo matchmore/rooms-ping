@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RoomPing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTo-CD-5yR">
+                                <rect key="frame" x="109" y="20" width="156" height="30"/>
+                                <state key="normal" title="Start Reporting Rooms"/>
+                                <connections>
+                                    <action selector="startReportingRooms" destination="BYZ-38-t0r" eventType="touchUpInside" id="4UV-Iw-7Tb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlX-cE-NHH">
+                                <rect key="frame" x="138" y="617" width="99" height="30"/>
+                                <state key="normal" title="Deploy Rooms"/>
+                                <connections>
+                                    <action selector="deployRooms" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dq2-2D-UPB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room #1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aq8-ef-ZMw">
+                                <rect key="frame" x="16" y="75" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room #2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHr-FC-et6">
+                                <rect key="frame" x="16" y="104" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4s-dv-JYl">
+                                <rect key="frame" x="96" y="75" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqj-Hp-fbp">
+                                <rect key="frame" x="96" y="104" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RlX-cE-NHH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1k2-uy-pje"/>
+                            <constraint firstItem="x4s-dv-JYl" firstAttribute="leading" secondItem="aq8-ef-ZMw" secondAttribute="trailing" constant="8" id="HGO-e9-Ddy"/>
+                            <constraint firstItem="EHr-FC-et6" firstAttribute="top" secondItem="aq8-ef-ZMw" secondAttribute="bottom" constant="8" id="JHR-Ex-Yhn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RlX-cE-NHH" secondAttribute="bottom" constant="20" id="WJb-4Q-KTL"/>
+                            <constraint firstItem="aq8-ef-ZMw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZTC-qR-STP"/>
+                            <constraint firstItem="wTo-CD-5yR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gpP-1f-9Pc"/>
+                            <constraint firstItem="wTo-CD-5yR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kd9-W9-oOK"/>
+                            <constraint firstItem="EHr-FC-et6" firstAttribute="leading" secondItem="aq8-ef-ZMw" secondAttribute="leading" id="lUe-3b-a0h"/>
+                            <constraint firstItem="gqj-Hp-fbp" firstAttribute="leading" secondItem="EHr-FC-et6" secondAttribute="trailing" constant="6" id="oQr-rU-San"/>
+                            <constraint firstItem="x4s-dv-JYl" firstAttribute="centerY" secondItem="aq8-ef-ZMw" secondAttribute="centerY" id="upn-PG-ldy"/>
+                            <constraint firstItem="aq8-ef-ZMw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="wHP-BR-RBA"/>
+                            <constraint firstItem="gqj-Hp-fbp" firstAttribute="centerY" secondItem="EHr-FC-et6" secondAttribute="centerY" id="wrV-Ce-cQO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="roomOneCountLabel" destination="x4s-dv-JYl" id="lxc-Vh-55Z"/>
+                        <outlet property="roomTwoCountLabel" destination="gqj-Hp-fbp" id="28a-X2-lBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
