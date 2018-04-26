@@ -15,13 +15,15 @@ class ViewController: UIViewController, MatchDelegate {
     
     var onMatch: OnMatchClosure?
     
+    // These are id's iBeacons devices known by the Matchmore cloud. Note, that Matchmore id is something different from beacon's uuid.
+    // You can add your own beacon devices here https://matchmore.io
     var rooms = [
-        "255f7085-fa2b-4603-8a07-3cf89b848c1a": 0,
-        "8f1ebd5f-1b8a-46bc-a532-2f88bf60a558": 0
+        "BEACON_DEVICE_ID_1": 0,
+        "BEACON_DEVICE_ID_2": 0
         ] {
         didSet {
-            roomOneCountLabel.text = String(rooms["255f7085-fa2b-4603-8a07-3cf89b848c1a"] ?? 0)
-            roomTwoCountLabel.text = String(rooms["8f1ebd5f-1b8a-46bc-a532-2f88bf60a558"] ?? 0)
+            roomOneCountLabel.text = String(rooms["BEACON_DEVICE_ID_1"] ?? 0)
+            roomTwoCountLabel.text = String(rooms["BEACON_DEVICE_ID_2"] ?? 0)
         }
     }
     

@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let config = MatchMoreConfig(apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiYTAyNjI5NDUtOTU1NC00YmFkLTlmNWUtZDZmM2Q2ODE1MWMwIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MjQ2NDgzMzAsImlhdCI6MTUyNDY0ODMzMCwianRpIjoiMSJ9.3-7vCYGIlHhBtZ9eKsZmkW3LTdnbL37T8d8i5IGbdACyE6agHuvika-7u19ZugPfaGJz3AUP26IeEFEwZWQCdQ")
+        // Get your API_KEY at Matchmore.io
+        let config = MatchMoreConfig(apiKey: "API_KEY")
         Matchmore.configure(config)
         Matchmore.startUsingMainDevice { result in
             switch result {
