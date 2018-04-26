@@ -53,7 +53,7 @@ class ViewController: UIViewController, MatchDelegate {
         beaconIds.forEach { beaconId in
             let iBeaconTriple = IBeaconTriple()
             iBeaconTriple.deviceId = beaconId
-            let pub = Publication(topic: "rooms", range: 1, duration: 99999, properties: [:])
+            let pub = Publication(topic: "rooms", range: 0, duration: 99999, properties: ["a":1])
             Matchmore.createPublication(publication: pub, forBeacon: iBeaconTriple) { result in
                 switch result {
                 case .success:
@@ -68,9 +68,8 @@ class ViewController: UIViewController, MatchDelegate {
     @IBAction func startReportingRooms() {
         Matchmore.subscriptions.findAll(completion: {
             if $0.isEmpty {
-                let roomsSub = Subscription(topic: "rooms", range: 50, duration: 99999, selector: "")
-                roomsSub.matchTTL = 10
-                roomsSub.matchDTL = 0
+                let roomsSub = Subscription(topic: "rooms", range: 10, duration: 99999, selector: "a = 1")
+                roomsSub.matchTTL = 0
                 Matchmore.createSubscriptionForMainDevice(subscription: roomsSub, completion: { (result) in
                     switch result {
                     case .success:

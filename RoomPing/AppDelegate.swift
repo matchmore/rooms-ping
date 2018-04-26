@@ -23,12 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch result {
             case .success:
                 print("Using main device")
+                Matchmore.startPollingMatches(pollingTimeInterval: 5)
+                Matchmore.startRangingBeacons(updateTimeInterval: 5)
+                Matchmore.startUpdatingLocation()
             case let .failure(error):
                 print(error.debugDescription)
             }
         }
-        Matchmore.startPollingMatches(pollingTimeInterval: 5)
-        Matchmore.startRangingBeacons(updateTimeInterval: 5)
         return true
     }
 }
