@@ -8,6 +8,7 @@
 
 import UIKit
 import Matchmore
+import CoreLocation
 
 class ViewController: UIViewController, MatchDelegate {
     @IBOutlet weak var roomOneCountLabel: UILabel!
@@ -55,7 +56,7 @@ class ViewController: UIViewController, MatchDelegate {
         beaconIds.forEach { beaconId in
             let iBeaconTriple = IBeaconTriple()
             iBeaconTriple.deviceId = beaconId
-            let pub = Publication(topic: "rooms", range: 0, duration: 99999, properties: ["a":1])
+            let pub = Publication(topic: "rooms", range: 0, duration: 99999, properties: ["other_data":1])
             Matchmore.createPublication(publication: pub, forBeacon: iBeaconTriple) { result in
                 switch result {
                 case .success:
@@ -70,7 +71,7 @@ class ViewController: UIViewController, MatchDelegate {
     @IBAction func startReportingRooms() {
         Matchmore.subscriptions.findAll(completion: {
             if $0.isEmpty {
-                let roomsSub = Subscription(topic: "rooms", range: 10, duration: 99999, selector: "a = 1")
+                let roomsSub = Subscription(topic: "rooms", range: 3.0, duration: 99999, selector: "other_data = 1")
                 roomsSub.matchTTL = 0
                 Matchmore.createSubscriptionForMainDevice(subscription: roomsSub, completion: { (result) in
                     switch result {
