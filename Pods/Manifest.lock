@@ -1,33 +1,24 @@
 PODS:
   - Alamofire (4.7.2)
-  - Matchmore (0.6.0):
+  - Matchmore (0.7.0):
     - Alamofire (~> 4.0)
     - Starscream (~> 3.0)
   - Starscream (3.0.5)
 
 DEPENDENCIES:
-  - Matchmore (from `https://github.com/matchmore/ios-sdk.git`, branch `match_ttl_beacons`)
+  - Matchmore (~> 0.7)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Matchmore
     - Starscream
-
-EXTERNAL SOURCES:
-  Matchmore:
-    :branch: match_ttl_beacons
-    :git: https://github.com/matchmore/ios-sdk.git
-
-CHECKOUT OPTIONS:
-  Matchmore:
-    :commit: bc5cc47d5a5f298cbf21e2fdf43be359a2fafacc
-    :git: https://github.com/matchmore/ios-sdk.git
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  Matchmore: dd8b61846da8841f7569adc2e93cb6292f6265ce
+  Matchmore: 467e28a2a4b0f9c7560d57605d724eda773fcdb8
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
 
-PODFILE CHECKSUM: 7317b910e88e9367348e7151bc610e00e252fa78
+PODFILE CHECKSUM: 823ee5f84eecdc552d3a7dd8c20cdd561614f003
 
 COCOAPODS: 1.5.0

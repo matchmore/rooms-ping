@@ -7,5 +7,5 @@ target 'RoomPing' do
   # ignore all warnings from all pods
   inhibit_all_warnings!
 
-  pod 'Matchmore', :git => 'https://github.com/matchmore/ios-sdk.git', :branch => 'match_ttl_beacons'
+  pod 'Matchmore', '~> 0.7'
 end
