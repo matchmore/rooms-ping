@@ -9,7 +9,7 @@ DEPENDENCIES:
   - Matchmore (~> 0.7)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - Matchmore
     - Starscream
@@ -21,4 +21,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 823ee5f84eecdc552d3a7dd8c20cdd561614f003
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.2
