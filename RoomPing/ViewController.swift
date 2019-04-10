@@ -19,12 +19,12 @@ class ViewController: UIViewController, MatchDelegate {
     // These are id's iBeacons devices known by the Matchmore cloud. Note, that Matchmore id is something different from beacon's uuid.
     // You can add your own beacon devices here https://matchmore.io
     var rooms = [
-        "BEACON_DEVICE_ID_1": 0,
-        "BEACON_DEVICE_ID_2": 0
+        "f33fd436-f60c-43b7-9219-01d9431878c7": 0,
+        "c98f9436-39fe-4507-9c03-44f0359d0762": 0
         ] {
         didSet {
-            roomOneCountLabel.text = String(rooms["BEACON_DEVICE_ID_1"] ?? 0)
-            roomTwoCountLabel.text = String(rooms["BEACON_DEVICE_ID_2"] ?? 0)
+            roomOneCountLabel.text = String(rooms["f33fd436-f60c-43b7-9219-01d9431878c7"] ?? 0)
+            roomTwoCountLabel.text = String(rooms["c98f9436-39fe-4507-9c03-44f0359d0762"] ?? 0)
         }
     }
     
@@ -56,7 +56,7 @@ class ViewController: UIViewController, MatchDelegate {
         beaconIds.forEach { beaconId in
             let iBeaconTriple = IBeaconTriple()
             iBeaconTriple.deviceId = beaconId
-            let pub = Publication(topic: "rooms", range: 0, duration: 99999, properties: ["other_data":1])
+            let pub = Publication(topic: "rooms", range: 3, duration: 99999, properties: ["other_data":1])
             Matchmore.createPublication(publication: pub, forBeacon: iBeaconTriple) { result in
                 switch result {
                 case .success:
@@ -71,8 +71,7 @@ class ViewController: UIViewController, MatchDelegate {
     @IBAction func startReportingRooms() {
         Matchmore.subscriptions.findAll(completion: {
             if $0.isEmpty {
-                let roomsSub = Subscription(topic: "rooms", range: 3.0, duration: 99999, selector: "other_data = 1")
-                roomsSub.matchTTL = 0
+                let roomsSub = Subscription(topic: "rooms", range: 1, duration: 99999, selector: "other_data = 1")
                 Matchmore.createSubscriptionForMainDevice(subscription: roomsSub, completion: { (result) in
                     switch result {
                     case .success:
